@@ -3,13 +3,29 @@
     const canv = document.getElementById('canv');
     const ctx = canv.getContext('2d');
 
-    function draw(w, h) {
-        for (let i = 0; i < w; i++) {
-            for (let j = 0; j < h; j++) {
-                ctx.fillRect(20*i, 20*j, 10, 10);
-            }
-        }
+    function drawHouse() {
+        // Стены дома (прямоугольник)
+        ctx.fillStyle = 'brown';
+        ctx.fillRect(100, 150, 100, 100);
+
+        // Крыша (треугольник)
+        ctx.fillStyle = 'red';
+        ctx.beginPath();
+        ctx.moveTo(75, 150); // Левая точка основания
+        ctx.lineTo(225, 150); // Правая точка основания
+        ctx.lineTo(150, 100); // Вершина
+        ctx.closePath();
+        ctx.fill();
+
+        // Окна
+        ctx.fillStyle = 'white';
+        ctx.fillRect(120, 170, 20, 20); // Левое окно
+        ctx.fillRect(160, 170, 20, 20); // Правое окно
+
+        // Дверь
+        ctx.fillStyle = 'darkbrown';
+        ctx.fillRect(140, 200, 20, 50);
     }
-    draw(10, 4);
-    
+
+    drawHouse();
 </script>
