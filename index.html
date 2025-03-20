@@ -5,11 +5,11 @@
 
     function drawHouse() {
         // Стены дома (прямоугольник)
-        ctx.fillStyle = 'brown';
+        ctx.fillStyle = 'pink';
         ctx.fillRect(100, 150, 100, 100);
 
         // Крыша (треугольник)
-        ctx.fillStyle = 'red';
+        ctx.fillStyle = 'brown';
         ctx.beginPath();
         ctx.moveTo(75, 150); // Левая точка основания
         ctx.lineTo(225, 150); // Правая точка основания
@@ -18,12 +18,12 @@
         ctx.fill();
 
         // Окна
-        ctx.fillStyle = 'white';
+        ctx.fillStyle = 'blue';
         ctx.fillRect(120, 170, 20, 20); // Левое окно
         ctx.fillRect(160, 170, 20, 20); // Правое окно
 
         // Дверь
-        ctx.fillStyle = 'darkbrown';
+        ctx.fillStyle = 'yellow';
         ctx.fillRect(140, 200, 20, 50);
     }
 
